@@ -1,0 +1,107 @@
+<!-- Day-3 
+Create Simple Calculator using Function -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-3</title>
+</head>
+
+<body>
+    <script>
+
+        function getNumber() {
+            var a = Number(prompt("Enter 1st Number: "));
+            var b = Number(prompt("Enter 2nd Number: "));
+            return [a, b];
+        }
+
+        function additions(a, b) {
+            document.write("Sum of A + B is = ", a + b);
+        }
+
+        function subtraction(a, b) {
+            document.write("Sum of A - B is = ", a - b);
+        }
+
+        function multiplication(a, b) {
+            document.write("Sum of A * B is = ", a * b);
+        }
+
+        function division(a, b) {
+            if (b === 0) {
+                document.write("Cannot divide by zero!");
+            } else {
+                document.write("Sum of A / B is = ", a / b);
+            }
+        }
+
+        function modulas(a, b) {
+            document.write("Sum of A % B is = ", a % b);
+        }
+
+        function power(a, b) {
+            document.write("Sum of A ** B is = ", a ** b);
+        }
+
+        var choice;
+
+        do {
+            choice = Number(
+                prompt(
+                    "--- Calculator ---\n" +
+                    "1. Addition (+)\n" +
+                    "2. Subtraction (-)\n" +
+                    "3. Multiplication (*)\n" +
+                    "4. Division (/)\n" +
+                    "5. Modulus (%)\n" +
+                    "6. Power (**)\n" +
+                    "0. Exit\n" +
+                    "Enter your choice:"
+                )
+            );
+
+            if (choice >= 1 && choice <= 6) {
+                var [a, b] = getNumber();  
+            }
+
+            switch (choice) {
+                case 1:
+                    additions(a, b);
+                    break;
+
+                case 2:
+                    subtraction(a, b);
+                    break;
+
+                case 3:
+                    multiplication(a, b);
+                    break;
+
+                case 4:
+                    division(a, b);
+                    break;
+
+                case 5:
+                    modulas(a, b);
+                    break;
+
+                case 6:
+                    power(a, b);
+                    break;
+
+                case 0:
+                    document.write("<p>Calculator Closed.</p>");
+                    break;
+
+                default:
+                    document.write("<p>Invalid Choice. Please try again.</p>");
+            }
+        } while (choice !== 0);
+    </script>
+</body>
+
+</html>
