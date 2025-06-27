@@ -1,0 +1,28 @@
+<!-- Day 5 
+Find leap Year  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5</title>
+</head>
+
+<body>
+    <script>
+        var year = Number(prompt("Enter Year : "));
+        if (!isNaN(year)) {
+            if (year % 4 == 0) {
+                alert(year + " is Leap Year");
+            } else if (year != 0) {
+                alert(year + " is not leap year");
+            }
+        } else {
+            alert("Enter Valild Number!!!");
+        }
+    </script>
+</body>
+
+</html>
