@@ -1,0 +1,28 @@
+<!-- Day 7
+ Reverse a number  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7</title>
+</head>
+
+<body>
+    <script>
+        var num = Number(prompt("Enter Number:- "));
+        document.write("You Enter this Number:- " + num + "<br>");
+        var reverse = 0;
+
+        while (num > 0) {
+            var digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = Math.floor(num / 10);
+        }
+        document.write("The Reverse Number is :- "+ reverse);
+    </script>
+</body>
+
+</html>
