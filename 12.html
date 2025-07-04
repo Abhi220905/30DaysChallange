@@ -1,0 +1,30 @@
+<!-- Day 12
+ Calculate the factorial of a number -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12</title>
+</head>
+
+<body>
+    <script>
+
+        var fact = Number(prompt("Enter Number:- "));
+        var number = 1;
+
+        if (fact < 0) {
+            document.write("Invalid Input");
+        } else {
+            for (var i = 2; i <= fact; i++) {
+                number *= i;
+            }
+            document.write(`Factorial of ${fact} is ${number}`);
+        }
+    </script>
+</body>
+
+</html>
