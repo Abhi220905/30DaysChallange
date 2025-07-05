@@ -1,0 +1,28 @@
+<!-- Day 13
+ Sum of digits of a number -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13</title>
+</head>
+
+<body>
+    <script>
+        var number = Number(prompt("Enter Number:- "));
+        var sum = 0;
+
+        var digit = number.toString();
+
+        for (var i = 0; i < digit.length; i++) {
+            sum += parseInt(digit[i]);
+        }
+        document.write(`The sum of digit(${number}) is :- ${sum}`);
+
+    </script>
+</body>
+
+</html>
