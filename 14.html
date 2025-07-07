@@ -1,0 +1,27 @@
+<!-- Day 14
+  Count the total digits in a number -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14</title>
+</head>
+
+<body>
+    <script>
+        var num = Number(prompt("Enter Number :- "));
+        var count = 0;
+
+        while (num != 0) {
+            num = Math.floor(num / 10);
+            count++;
+        }
+        document.write(`Total Number of digit is :- ${count}`);
+
+    </script>
+</body>
+
+</html>
