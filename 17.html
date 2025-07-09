@@ -1,0 +1,29 @@
+<!-- Day 17
+Find max & min values in array -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50];
+        var min = arr[0];
+        var max = arr[0];
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > min) min = arr[i];
+            if (arr[i] < max) max = arr[i];
+        }
+
+        document.write(`The Minimum Number is :- ${min}<br>`);
+        document.write(`The Maximum Number is :- ${max}`);
+    </script>
+</body>
+
+</html>
