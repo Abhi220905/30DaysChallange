@@ -1,0 +1,39 @@
+<!-- Day 18
+ Count positive, negative & zero values -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+</head>
+
+<body>
+    <script>
+        const arr = [10, 98, -91, 54, 0, 33, 0, -5];
+
+        var positive = 0;
+        var negative = 0;
+        var zero = 0;
+
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                positive++;
+            } else if (arr[i] < 0) {
+                negative++;
+            } else {
+                zero++;
+            }
+        }
+
+        document.write(`<b>The Aarray</b> :- [ ${arr} ] <br>`);
+        document.write(`The Positive Number is  :- ${positive} <br>`);
+        document.write(`The Negative Number is :- ${negative} <br>`);
+        document.write(`The Zero Value is :- ${zero}`);
+    </script>
+</body>
+
+</html>
