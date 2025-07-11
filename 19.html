@@ -1,0 +1,41 @@
+<!-- Day 19
+Find duplicate elements in array -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+</head>
+
+<body>
+    <script>
+        const arr = [10, 10, 20, 30, , 50, 50, 40, 50];
+        const dupArr = [];
+
+        document.write(`The array is [ ${arr} ] <br>`);
+
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    var add = false;
+                    for (var k = 0; k < dupArr.length; k++) {
+                        if (dupArr[i] === arr[i]) {
+                            add = true;
+                            break;
+                        }
+                    }
+                    if (!add) {
+                        dupArr.push(arr[i]);
+                    }
+                }
+            }
+        }
+        document.write(`Duplicate Array is [ ${dupArr} ]`);
+
+    </script>
+</body>
+
+</html>
