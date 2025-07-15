@@ -1,0 +1,32 @@
+<!-- Day 22
+ Count vowels in a string -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22</title>
+</head>
+
+<body>
+    <script>
+        function countVowel(str) {
+            const vowel = "aeiou";
+            let count = 0;
+
+            for (const char of str.toLowerCase()) {
+                if (vowel.includes(char)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        const input = "Abhishek Khatri";
+        document.write(`The Number of Vowels :- ${countVowel(input)}`);
+    </script>
+</body>
+
+</html>
