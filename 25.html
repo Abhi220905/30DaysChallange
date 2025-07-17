@@ -1,0 +1,51 @@
+<!-- Day 25: Replace part of a string -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Day 25</title>
+</head>
+
+<body>
+    <form action="" class="mx-auto m-5 p-3 shadow col-6">
+        <h2 class="text-center mb-4">Replace First Occurrence</h2>
+
+        <label for="text" class="form-label">Original Text:</label>
+        <input type="text" id="text" class="form-control mb-3" value="I like apples. Apples are tasty.">
+
+        <label for="find" class="form-label">Text to Find:</label>
+        <input type="text" id="find" class="form-control mb-3" value="apples">
+
+        <label for="replace" class="form-label">Replace With:</label>
+        <input type="text" id="replace" class="form-control mb-3" value="oranges">
+
+        <button onclick="handleReplace(event)" class="btn btn-success">Replace</button>
+
+        <h3 class="mt-4">Result:</h3>
+        <p id="result" class="alert alert-primary"></p>
+    </form>
+
+    <script>
+        function replace(text, findStr, replaceStr) {
+            return text.replace(findStr, replaceStr);
+        }
+
+        function handleReplace(event) {
+            event.preventDefault();
+
+            const text = document.getElementById("text").value;
+            const findStr = document.getElementById("find").value;
+            const replaceStr = document.getElementById("replace").value;
+
+            const result = replace(text, findStr, replaceStr);
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+
+</html>
