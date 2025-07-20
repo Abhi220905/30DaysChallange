@@ -1,0 +1,53 @@
+<!-- - Day 28: Function to calculate a^b -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Day 28</title>
+</head>
+
+<body>
+    <form action="" class="col-6 m-5 p-3 mx-auto shadow ">
+
+        <h2 class="text-center">Calculate A<sup>b</sup></h2>
+
+        <label for="base" class="form-label">Base (A):</label>
+        <input type="number" id="base" step="any" class="form-control"><br><br>
+
+        <label for="exponent" class="form-label">Exponent (b):</label>
+        <input type="number" id="exponent" step="any" class="form-control"><br><br>
+
+        <button onclick="calculatePower(event)" class="btn btn-success">Calculate</button>
+
+        <h3 id="result">Result:-</h3>
+    </form>
+
+    <script>
+        function power(a, b) {
+            return Math.pow(a, b);
+        }
+
+        function calculatePower(event) {
+            event.preventDefault();
+
+            const a = parseFloat(document.getElementById("base").value);
+            const b = parseFloat(document.getElementById("exponent").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            const result = power(a, b);
+            document.getElementById("result").innerText = "Result:- " + result;
+        }
+    </script>
+</body>
+
+</html>
