@@ -1,0 +1,40 @@
+<!-- - Day 27: Function to check prime number -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 27</title>
+</head>
+
+<body>
+    <h1>Prime Number Checker</h1>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        let input = prompt("Enter any number:");
+        let number = parseInt(input);
+
+        if (isNaN(number)) {
+            document.write(`<p>❌ "${input}" is not a valid number.</p>`);
+        } else {
+            if (isPrime(number)) {
+                document.write(`<p>✅ ${number} is a <b>prime</b> number.</p>`);
+            } else {
+                document.write(`<p>❌ ${number} is <b>not</b> a prime number.</p>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
